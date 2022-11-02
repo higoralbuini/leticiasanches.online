@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    
+    <link rel="preload" href="https://player-vz-974bbd73-4be.tv.pandavideo.com.br/embed/css/styles.css" as="style">
+<link rel="prerender" href="https://player-vz-974bbd73-4be.tv.pandavideo.com.br/embed/?v=d0c4fab0-b958-48b8-8780-2ce396a87974">
+<link rel="preload" href="https://player-vz-974bbd73-4be.tv.pandavideo.com.br/embed/js/hls.js" as="script">
+<link rel="preload" href="https://player-vz-974bbd73-4be.tv.pandavideo.com.br/embed/js/plyr.polyfilled.min.js" as="script">
+<link rel="preload" href="https://config.tv.pandavideo.com.br/vz-974bbd73-4be/d0c4fab0-b958-48b8-8780-2ce396a87974.json" as="fetch">
+<link rel="preload" href="https://config.tv.pandavideo.com.br/vz-974bbd73-4be/config.json" as="fetch">
+<link rel="preload" href="https://b-vz-974bbd73-4be.tv.pandavideo.com.br/d0c4fab0-b958-48b8-8780-2ce396a87974/playlist.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://b-vz-974bbd73-4be.tv.pandavideo.com.br">
+<link rel="dns-prefetch" href="https://player-vz-974bbd73-4be.tv.pandavideo.com.br">
+<link rel="dns-prefetch" href="https://vz-974bbd73-4be.b-cdn.net">
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -51,66 +63,7 @@
     <meta name="googlebot" value="noindex,nofollow">
 <meta name="robots" value="noindex,nofollow">
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
 
-      $.ajax({
-        url: "https://ipinfo.io/json",
-        jsonpCallback: "callback",
-        dataType: "jsonp",
-        success: function (location) {
-          var data = new Date(),
-            dia = data.getDate().toString().padStart(2, '0'),
-            mes = (data.getMonth() + 1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
-            ano = data.getFullYear();
-          
-          data = dia + '/' + mes + '/' + ano;
-
-          //AQUI altera o texto ANTES do nome da cidade
-          textoAntesCidade = 'Você e algumas pessoas próximo a ';
-          //AQUI altera o texto DEPOIS do nome da cidade
-          textoDepoisCidade = ' foram selecionadas para ver este vídeo até o dia ';
-
-          mostrarData = true; //SE não quiser que a data apareça é só mudar o valor 'true' para 'false' e vice-versa para mostrar novamente 
-          
-          if(location.city)
-            $('#container-cidade').html(textoAntesCidade + location.city + textoDepoisCidade + (mostrarData ? data : ''));
-        }
-      });
-
-  </script>
-  <style>
-    #container-cidade {
-      padding: 1rem;
-      width: 100%;
-      /* AQUI altera a cor de fundo da caixa */
-      background-color: #000000;
-      /* AQUI altera a cor da letra */
-      color: #FFFFFF;
-      display: inline-table;
-      /* AQUI altera o tamanho da letra */
-      font-size: 14px;
-      /* AQUI altera a altura da caixa */
-      height: 10px;
-      z-index: 1;
-      position: inherit;
-      top: 0;
-      left: 0;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      text-align: center;
-    }
-  </style>
-
-  </head>
-
-    <div id="container-cidade">Aguarde um momento... </div>
-    
-  </head>
-  <body>
-
-      <br/>
-
-    
     <header class="py-4">
       <div class="container">
         <div class="row justify-content-center">
